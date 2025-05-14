@@ -3,6 +3,7 @@ from django.utils import timezone
 from datetime import datetime, time
 
 class Room(models.Model):
+    name = models.CharField(max_length=100)
     room_number = models.CharField(max_length=10, unique=True)
     room_type = models.CharField(max_length=50)
     price_per_night = models.DecimalField(max_digits=8, decimal_places=2)
